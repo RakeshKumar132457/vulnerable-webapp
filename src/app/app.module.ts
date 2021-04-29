@@ -19,7 +19,11 @@ import { SecurityMisconfigComponent } from './components/vulns/security-misconfi
 import { XssComponent } from './components/vulns/xss/xss.component';
 import { InsecureDeserializationComponent } from './components/vulns/insecure-deserialization/insecure-deserialization.component';
 import { KnownVulnComponent } from './components/vulns/known-vuln/known-vuln.component';
-import { InsufficientLoggingComponent } from './components/vulns/insufficient-logging/insufficient-logging.component'
+import { InsufficientLoggingComponent } from './components/vulns/insufficient-logging/insufficient-logging.component';
+import { HomeComponent } from './components/home/home.component';
+import { SecretDataComponent } from './components/vulns/data-exposure/secret-data/secret-data.component';
+import { User1Component } from './components/vulns/broken-access/user1/user1.component';
+import { User2Component } from './components/vulns/broken-access/user2/user2.component'
 
 @NgModule({
   declarations: [
@@ -36,7 +40,11 @@ import { InsufficientLoggingComponent } from './components/vulns/insufficient-lo
     XssComponent,
     InsecureDeserializationComponent,
     KnownVulnComponent,
-    InsufficientLoggingComponent
+    InsufficientLoggingComponent,
+    HomeComponent,
+    SecretDataComponent,
+    User1Component,
+    User2Component
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,11 @@
+@import "../../../themes/variables";
 // Elements
 mat-sidenav {
-  width: 235px;
+  width: 13.5%;
+}
+
+mat-nav-list {
+  padding: 0;
 }
 
 // Classes
@@ -10,4 +15,13 @@ mat-sidenav {
 
 .router-container {
   padding: 15px;
+}
+
+.logo-avatar {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  background-color: white;
+  border-radius: 50%;
 }

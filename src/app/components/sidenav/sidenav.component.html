@@ -1,7 +1,11 @@
 <mat-sidenav-container fullscreen class="mat-sidenav-fullscreen">
   <mat-sidenav #sidenav [opened]="true" mode="side">
-    <mat-nav-list *ngFor="let vuln of vulnerability">
-      <a mat-list-item [routerLink]="vuln.path">{{vuln.name}}</a>
+    <mat-nav-list style="padding-top: 5px;">
+      <img class="logo-avatar" src="../../../assets/icons/icon-72x72.png">
+      <h2 align="center">User Name</h2>
+    </mat-nav-list>
+    <mat-nav-list *ngFor="let vuln of vulnerability" color="primary">
+      <a color="secondary" mat-list-item [routerLink]="vuln.path" color="primary">{{vuln.name}}</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>

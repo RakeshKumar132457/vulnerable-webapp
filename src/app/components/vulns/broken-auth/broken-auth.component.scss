@@ -1,0 +1,26 @@
+@import "../../../../themes/variables.scss";
+// Elements
+blockquote {
+  font-size: $font-size-medium;
+}
+
+h1 {
+  font-size: $heading-size-medium;
+}
+
+p {
+  font-size: $font-size-medium;
+}
+
+mat-form-field {
+  width: 250px;
+}
+
+//Class
+.main-container {
+  margin-top: 7%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,54 @@
+@import "../../../themes/variables.scss";
+h1 {
+  font-size: $heading-size-large;
+}
+
+p {
+  font-size: $font-size-small;
+}
+
+main {
+  margin-top: 50px;
+  padding: 10px;
+  background-color: #f2f3f6;
+  color: black;
+}
+
+footer {
+  margin-top: 50px;
+  background-color: #9c27b0;
+  padding: 10px;
+}
+
+// Classes
+.home-main-content {
+  background-color: #f7f6ff;
+  color: black;
+}
+
+.home-content {
+  padding: 5px;
+}
+
+.main-header {
+  margin-top: 50px;
+}
+
+.card-container {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.card-content h2 {
+  margin: 0px;
+}
+
+.image-container {
+  padding: 20px;
+  background-color: #99dae4;
+}
+
+.end-container {
+  background-color: white;
+  margin-top: 50px;
+}

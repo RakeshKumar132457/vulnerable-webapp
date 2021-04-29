@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./broken-auth.component.scss']
 })
 export class BrokenAuthComponent implements OnInit {
+    hide = true;
 
   constructor() { }
 

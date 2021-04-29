@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LoggingService } from 'src/app/core/services/logging.service';
 
 @Component({
   selector: 'app-insufficient-logging',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InsufficientLoggingComponent implements OnInit {
 
-  constructor() { }
+  constructor(private logger: LoggingService) { }
+
+  testLog() {
+    this.logger.log("Test the `log()` Method");
+  }
 
   ngOnInit(): void {
   }
