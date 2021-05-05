@@ -1,3 +1,31 @@
+<h1>Cross Site Scripting</h1>
+<hr>
+<p>
+  Cross Site Scripting (XSS) is a widespread vulnerability that affects many web applications. XSS attacks consist of
+  injecting malicious client-side scripts into a website and using the website as a propagation method.
+</p>
+<p>
+  The risks behind XSS is that it allows an attacker to inject content into a website and modify how it is displayed,
+  forcing a victim’s browser to execute the code provided by the attacker while loading the page.
+</p>
+<p>
+  <strong>XSS is present in about two-thirds of all applications.</strong>
+</p>
+<p>
+  Generally, XSS vulnerabilities require some type of interaction by the user to be triggered, either via social
+  engineering or via a visit to a specific page. If an XSS vulnerability is not patched, it can be very dangerous to any
+  website.
+</p>
+<h2>Steps to trigger: </h2>
+<hr>
+<ul>
+  <li>Clicking on the <i>untrusted URL</i> will give error as it is being sanitized</li>
+  <li>Clicking on the <i>trusted URL</i> will trigger the <strong>XSS</strong> payload</li>
+  <ul>
+    <li>That will show an alert prompt</li>
+  </ul>
+  <li>This show that the latter URL is vulnerable</li>
+</ul>
 <h4>An untrusted URL:</h4>
 <p><a class="e2e-dangerous-url" [href]="dangerousUrl">Click me</a></p>
 <h4>A trusted URL:</h4>

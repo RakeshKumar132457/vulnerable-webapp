@@ -22,8 +22,10 @@ import { KnownVulnComponent } from './components/vulns/known-vuln/known-vuln.com
 import { InsufficientLoggingComponent } from './components/vulns/insufficient-logging/insufficient-logging.component';
 import { HomeComponent } from './components/home/home.component';
 import { SecretDataComponent } from './components/vulns/data-exposure/secret-data/secret-data.component';
-import { User1Component } from './components/vulns/broken-access/user1/user1.component';
-import { User2Component } from './components/vulns/broken-access/user2/user2.component'
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+
+
 
 @NgModule({
   declarations: [
@@ -43,14 +45,14 @@ import { User2Component } from './components/vulns/broken-access/user2/user2.com
     InsufficientLoggingComponent,
     HomeComponent,
     SecretDataComponent,
-    User1Component,
-    User2Component
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
+    FormsModule,
+    ReactiveFormsModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
       // Register the ServiceWorker as soon as the app is stable

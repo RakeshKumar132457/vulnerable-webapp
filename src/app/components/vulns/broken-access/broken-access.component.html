@@ -1,4 +1,43 @@
 <h1>Broken Access </h1>
 <hr>
-<p>User information</p>
+<p>
+  Access control enforces policy such that users cannot act outside of their intended permissions. Failures typically
+  lead to unauthorized information disclosure, modification or destruction of all data, or performing a business
+  function outside of the limits of the user.</p>
+<h2>
+  Common access control vulnerabilities include:
+</h2>
+<ul>
+  <li>
+    Bypassing access control checks by modifying the URL, internal application state, or the HTML page, or simply using
+    a custom API attack tool.
+  </li>
+  <li>
+    Allowing the primary key to be changed to another’s users record, permitting viewing or editing someone else’s
+    account.
+  </li>
+  <li>
+    Elevation of privilege. Acting as a user without being logged in, or acting as an admin when logged in as a user.
+  </li>
+  <li>
+    Metadata manipulation, such as replaying or tampering with a JSON Web Token (JWT) access control token or a cookie
+    or hidden field manipulated to elevate privileges, or abusing JWT invalidation.
+  </li>
+  <li>
+    CORS misconfiguration allows unauthorized API access.
+  </li>
+  <li>
+    Force browsing to authenticated pages as an unauthenticated user or to privileged pages as a standard user.
+  </li>
+  <li>
+    Accessing API with missing access controls for POST, PUT and DELETE
+  </li>
+</ul>
+<h2>Steps to trigger :</h2>
+<hr>
+<ul>
+  <li>By default this is normal user page</li>
+  <li>Chagne the <i>user</i> paramter in url to <i>admin</i></li>
+  <li>It will give access to the admin page</li>
+</ul>
 <router-outlet></router-outlet>

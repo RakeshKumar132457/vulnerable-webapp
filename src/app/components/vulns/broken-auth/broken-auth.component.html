@@ -1,31 +1,59 @@
 <h1>Broken Authentication</h1>
 <hr>
-<div class="main-container">
-  <div class="child-container">
-    <h2>Enter you account details</h2>
-    <mat-form-field appearance="outline">
-      <mat-label>Username</mat-label>
-      <input matInput placeholder="Username">
-      <mat-icon matSuffix>person</mat-icon>
-      <mat-hint>Enter a valid Username</mat-hint>
-    </mat-form-field>
-    <br>
-    <mat-form-field appearance="outline">
-      <mat-label>Password</mat-label>
-      <input matInput [type]="hide ? 'password' : 'text'">
-      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
-        [attr.aria-pressed]="hide">
-        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-      </button>
-      <mat-hint>Enter your Password</mat-hint>
-    </mat-form-field>
-    <br>
-    <mat-form-field appearance="outline">
-      <mat-label>Enter your Employee ID</mat-label>
-      <input matInput placeholder="Employee ID">
-      <mat-icon matSuffix>tag</mat-icon>
-      <mat-hint>Enter Employee ID</mat-hint>
-    </mat-form-field>
+<div>
+  <p>
+    A broken authentication vulnerability can allow an attacker to use manual and/or automatic methods to try to gain
+    control over any account they want in a system – or even worse – to gain complete control over the system.
 
-  </div>
+    Websites with broken authentication vulnerabilities are very common on the web. Broken authentication usually refers
+    to logic issues that occur on the application authentication’s mechanism, like bad session management prone to
+    username enumeration – when a malicious actor uses brute-force techniques to either guess or confirm valid users in
+    a system.
+  </p>
 </div>
+<div>
+  <h2>
+    Steps to trigger:
+    <hr>
+    <ul>
+      <li>Use the username : user</li>
+      <li>Use the password : password</li>
+      <li>Employee ID can be anything. The user will be able to login without EmpID</li>
+    </ul>
+  </h2>
+</div>
+<form [formGroup]="formData" (ngSubmit)="onSubmit()">
+  <div class="main-container">
+    <div class="child-container">
+      <h2>Enter you account details</h2>
+      <mat-form-field appearance="outline">
+        <mat-label>Username</mat-label>
+        <input matInput placeholder="Username" formControlName="user" required>
+        <mat-icon matSuffix>person</mat-icon>
+        <mat-hint>Enter a valid Username</mat-hint>
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="outline">
+        <mat-label>Password</mat-label>
+        <input matInput [type]="hide ? 'password' : 'text'" formControlName="password" required>
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+          [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+        <mat-hint>Enter your Password</mat-hint>
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="outline">
+        <mat-label>Enter your Employee ID</mat-label>
+        <input matInput placeholder="Employee ID" name="empid">
+        <mat-icon matSuffix>tag</mat-icon>
+        <mat-hint>Enter Employee ID</mat-hint>
+      </mat-form-field>
+      <br>
+      <button type="submit" mat-button style="width: 100%; background-color: #7b1fa2;" mat-button>Submit</button>
+    </div>
+  </div>
+
+</form>
+<br>
+<br>

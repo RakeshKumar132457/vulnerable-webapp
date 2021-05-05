@@ -1,0 +1,20 @@
+@import "../../../../themes/variables.scss";
+// Elements
+blockquote {
+  font-size: $font-size-medium;
+}
+
+h1 {
+  font-size: $heading-size-medium;
+}
+
+p {
+  font-size: $font-size-medium;
+}
+
+// Classes
+.lab-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

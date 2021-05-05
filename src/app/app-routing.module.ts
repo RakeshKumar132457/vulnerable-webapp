@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
+import { AdminComponent } from './components/vulns/broken-access/admin/admin.component';
 import { BrokenAccessComponent } from './components/vulns/broken-access/broken-access.component';
-import { User1Component } from './components/vulns/broken-access/user1/user1.component';
-import { User2Component } from './components/vulns/broken-access/user2/user2.component';
+import { UserComponent } from './components/vulns/broken-access/user/user.component';
 import { BrokenAuthComponent } from './components/vulns/broken-auth/broken-auth.component';
 import { DataExposureComponent } from './components/vulns/data-exposure/data-exposure.component';
 import { SecretDataComponent } from './components/vulns/data-exposure/secret-data/secret-data.component';
@@ -30,8 +30,8 @@ const routes: Routes = [
   { path: 'xxe', component: XxeComponent },
   {
     path: 'broken-access', component: BrokenAccessComponent, children: [
-      { path: 'user1', component: User1Component },
-      { path: 'user2', component: User2Component }
+      { path: 'user', component: UserComponent },
+      { path: 'admin', component: AdminComponent }
     ]
   },
   {
